@@ -1,6 +1,11 @@
 <h2>More information about {{model.author}}'s question</h2>
-
-{{question-detail question=model destroyQuestion="destroyQuestion"}}
-
+<div class="row">
+  <div class="col-md-7">
+    {{question-detail question=model destroyQuestion="destroyQuestion"}}
+  </div>
+  <div class="col-md-5">
+    {{update-question question=model update="update"}}
+  </div>
+</div>
 
 {{new-comment saveComment="saveComment" question=model}}

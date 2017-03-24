@@ -1,7 +1,7 @@
 <h1>All Questions</h1>
 <ol>
 {{#each model.questions as |question|}}
-     {{#link-to 'question' question.id}}{{question-tile question=question destroyRental="destroyRental"}}{{/link-to}}
+     {{#link-to 'question' question.id}}{{question-tile question=question destroyQuestion="destroyQuestion" update="update"}}{{/link-to}}
 {{/each}}
 </ol>
 
