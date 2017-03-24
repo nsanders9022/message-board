@@ -1,8 +1,8 @@
-<h2> All Questions </h2>
-<ul>
+<h2>All Questions</h2>
+<ol>
 {{#each model.questions as |question|}}
      {{#link-to 'question' question.id}}{{question-tile question=question destroyRental="destroyRental"}}{{/link-to}}
 {{/each}}
-</ul>
+</ol>
 
 {{new-question saveQuestion="saveQuestion"}}
