@@ -18,5 +18,14 @@ export default Ember.Route.extend({
       question.save();
       this.transitionTo('question');
     },
+    saveComment(params) {
+      var newComment = this.store.createRecord('comment', params);
+      var question = params.question;
+      question.get('comments').addObject(newComment);
+      newComment.save().then(function() {
+        return question.save();
+      });
+      this.transitionTo('question', question);
+    }
   }
 });
