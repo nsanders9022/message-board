@@ -1,4 +1,6 @@
 $daughter:'Architects Daughter', cursive;
+$darkPurple: #796891;
+$lightPurple: #cebfe2;
 
 .body {
   background-color: #e6dff0;
@@ -10,15 +12,19 @@ $daughter:'Architects Daughter', cursive;
 }
 
 .container-fluid {
-  background-color: #574a68;
+  background-color: $darkPurple;
   h1 {
     color: white;
+    text-align: left;
   }
 }
 
-ol {
+ol, ul {
   list-style: upper-roman;
   font-size: 30px;
+  li{
+    color: $darkPurple;
+  }
   h4 {
     color: black;
     font-size: 23px;
@@ -28,8 +34,10 @@ ol {
   }
 }
 
-li{
-  color: #574a68;
+
+
+h1 {
+  text-align: center;
 }
 
 h2 {
@@ -37,9 +45,22 @@ h2 {
   text-align: center;
 }
 
-
 p {
-  font-size: 20px;
+  font-size: 25px;
+}
+
+.new-button {
+  background-color: $darkPurple;
+  color: white;
+  margin-top: 15px;
+}
+
+.save-button {
+  background-color: $lightPurple;
+}
+
+label {
+  font-size: 18px;
 }
 
 .labels {
@@ -47,8 +68,8 @@ p {
 }
 
 .question-content {
-  background-color: #cebfe2;
-  width: 50%;
+  background-color: $lightPurple;
+  width: 100%;
   padding: 10px 5% 10px 5%;
   border-radius: 13px;
 }

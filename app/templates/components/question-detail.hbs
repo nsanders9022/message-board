@@ -1,15 +1,22 @@
-<div class="question-content">
-  <p><span class="labels">Author: </span>{{question.author}}</p>
-  <p><span class="labels">Question: </span>{{question.content}}</p>
-  <p><span class="labels">Note: </span>{{question.note}}</p>
+<div class="row">
+  <div class="col-md-7">
+    <div class="question-content">
+      <p><span class="labels">Author: </span>{{question.author}}</p>
+      <p><span class="labels">Question: </span>{{question.content}}</p>
+      <p><span class="labels">Note: </span>{{question.note}}</p>
+    </div>
+  </div>
+  <div class="col-md-5">
+    {{update-question question=model update="update"}}
+
+    <button class="btn new-button"{{action 'delete' question}}>Delete Question</button>
+  </div>
 </div>
 
-{{update-question question=model update="update"}}
-
-<button class="btn btn-danger"{{action 'delete' question}}>Delete Question</button>
 
 
-<h3>Comments</h3>
+
+<h2>Comments</h2>
 <ul>
   {{#each question.comments as |comment|}}
     {{comment-tile comment=comment}}
